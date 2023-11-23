@@ -88,18 +88,3 @@ a:active {
         filter: blur(2px);
     }
 }
-
-/* failed attempts to control the blur of the background image using the text hover */
-
-/* 
-a:hover img{
-    filter: blur(45px);
-}
-
-img:has(a:hover) {
-    filter: blur(0px);
-}
-
-a:hover ~ img {
-    filter: blur(0px);
-} */
