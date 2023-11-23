@@ -1,0 +1,70 @@
+/* styling the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#container {
+    /* ensuring bg image fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    /* flex allows for easy centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* allow the contents of the container to be layered on top */
+    position: relative;
+}
+
+#bg-gif {
+    /* ensuring bg gif fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    /* blurring the bg gif so that the image on top is the focal point */
+    filter: blur(5px);
+    /* scaling it up so that the blurred edges are not visible */
+    transform: scale(1.05, 1.05);
+}
+
+#floorplan {
+    /* layering the floorplan image on top of the bg gif */
+    position: absolute;
+    /* shrinking the image */
+    width: 1024px;
+}
+
+#stars {
+    /* layering the gif on top of the floorplan */
+    position: absolute;
+    /* shrinking the gif */
+    width: 1024px;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    line-height: 2rem;
+    color: white;
+    /* default text is slightly faint and blurry */
+    opacity: 60%;
+    transition: opacity 0.5s;
+    filter: blur(0.8px);
+    /* remove the default underline applied to links */
+    text-decoration: none;
+    /* responsively fix the text to the bottom right corner */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/* on hover, bring the faint blurry text into clear focus */
+h4:hover {
+    opacity: 100%;
+    filter: blur(0px);
+}

@@ -1,0 +1,55 @@
+/* styling the whole page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+#container{
+    /* arranging the images in a centered flex column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding the bottom of the container - image spacing is otherwise controlled individually from the top */
+    padding-bottom: 200px;
+}
+
+img{
+    /* responsively sizing the images */
+    max-width: 60vw;
+}
+
+.divs{
+    /* padding the top of each image via its div to space them */
+    padding-top: 200px;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    line-height: 2rem;
+    color: white;
+    /* default text is slightly faint and blurry */
+    opacity: 60%;
+    filter: blur(0.8px);
+    /* hover transition takes 0.5s */
+    transition: opacity 0.5s;
+    /* remove the default underline applied to links */
+    text-decoration: none;
+    /* responsively fix the text to the bottom right corner */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/* on hover, bring the faint blurry text into clear focus */
+h4:hover{
+    opacity: 90%;
+    filter: blur(0px);
+}
+

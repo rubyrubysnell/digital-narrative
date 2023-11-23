@@ -1,0 +1,106 @@
+/* styling applied to all "room" pages */
+
+/* styling the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    line-height: 2rem;
+    color: white;
+    /* default text is slightly faint and blurry */
+    opacity: 60%;
+    filter: blur(0.8px);
+    /* hover transition takes 0.5s */
+    transition: opacity 0.5s;
+    /* remove the default underline applied to links */
+    text-decoration: none;
+    /* responsively fix the text to the bottom right corner */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/* on hover, bring the faint blurry text into clear focus */
+h4:hover {
+    opacity: 100%;
+    filter: blur(0px);
+}
+
+#container {
+    /* ensuring bg image fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* flex allows for easy centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* allow the contents of the container to be layered on top */
+    position: relative;
+}
+
+#bg {
+    /* ensuring that the image does not stretch */
+    object-fit: cover;
+    /* ensuring bg image fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    /* blurring the bg image so that the image on top is the focal point */
+    filter: blur(30px);
+    /* scaling it up so that the blurred edges are not visible */
+    transform: scale(1.05, 1.05);
+}
+
+#room {
+    /* layering the room image on top of the bg image */
+    position: absolute;
+}
+
+/* a and .item must have same styling so that the gifs that are also links retain their styling */
+
+a {
+    /* layering the gifs on top of the image */
+    position: absolute;
+    /* default opacity is 60% */
+    opacity: 60%;
+    /* hover transition takes 0.3s */
+    transition: opacity 0.3s;
+    /* page load animation takes 2s */
+    animation: fadeDrawings 2s;
+}
+
+.item {
+    /* layering the drawings on top of the room image */
+    position: absolute;
+    /* defualt opacity is 60% */
+    opacity: 60%;
+    /* hover transition takes 0.3s */
+    transition: opacity 0.3s;
+    /* page load animation takes 2s */
+    animation: fadeDrawings 2s;
+}
+
+.item:hover {
+    /* on hover, make the drawings opaque */
+    opacity: 100%;
+}
+
+/* on page load, animate the opacity of the drawings so they appear to fade into view  */
+
+@keyframes fadeDrawings {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 60%;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floorplan</title>
+    <link rel="stylesheet" href="css/stylefloorplan.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- layered images and gifs -->
+        <img id="bg-gif" src="img/floorplan/Background.gif">
+        <img id="floorplan" src="img/floorplan/Full Floorplan Large.png">
+        <!-- turning the transparent stars gif into an image map -->
+        <img id="stars" src="img/floorplan/Stars.gif" usemap="#floorplan-map">
+        <map name="floorplan-map">
+            <!-- defining three different clickable areas on the one gif, each linking to a different page -->
+            <area shape="rect" coords="201,59,417,185" href="bedroom.html">
+            <area shape="rect" coords="639,331,734,481" href="hall.html">
+            <area shape="rect" coords="774,307,965,466" href="livingroom.html">
+        </map>
+        <!-- back button -->
+        <a id="back" href="index.html">
+            <h4>back</h4>
+        </a>
+    </div>
+</body>
+
+</html>

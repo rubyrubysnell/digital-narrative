@@ -1,0 +1,32 @@
+/* positioning the gifs on top of the image */
+
+#fire{
+    margin-top: 150px;
+    margin-right: 70px;
+}
+
+#tables{
+    margin-top: 450px;
+    margin-left: 100px;
+}
+
+#organ{
+    margin-top: 90px;
+    margin-left: 750px;
+}
+
+#photos{
+    margin-top: 28px;
+    margin-left: 190px;
+}
+
+/* indicating that the organ and the fire gifs are clickable */
+
+#organ:hover{
+    cursor: pointer;
+}
+
+
+#fire:hover{
+    cursor: pointer;
+}

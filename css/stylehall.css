@@ -1,0 +1,21 @@
+/* positioning the gifs on top of the image */
+
+#stairlift{
+    margin-top: 140px;
+    margin-right: 280px;
+}
+
+/* styling the photo frame gif by styling its link */
+
+a{
+    margin: 0;
+    width: 265px;
+    margin-bottom: 570px;
+    margin-right: 150px;
+}
+
+/* indicating that the photo frame gif is clickable */
+
+#photos:hover{
+    cursor: pointer;
+}

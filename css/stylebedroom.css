@@ -1,0 +1,40 @@
+/* positioning the gifs on top of the image */
+
+#dogs {
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+#cup {
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+#frame {
+    margin-bottom: 150px;
+    margin-left: 285px;
+}
+
+
+#lego {
+    margin-top: 400px;
+    margin-right: 500px;
+}
+
+#photo {
+    margin-right: 175px;
+    margin-top: 10px;
+}
+
+/* styling the window gif via styling its link */
+a {
+    margin: 0;
+    width: 239px;
+    margin-bottom: 310px;
+    margin-right: 210px;
+}
+
+/* indicating that the window gif is clickable */
+#window:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,105 @@
+/* styling the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    /* ensuring bg image fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* flex allows for easy centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* allow the contents of the container to be layered on top */
+    position: relative;
+}
+
+img {
+    /* ensuring that the image does not stretch */
+    object-fit: cover;
+    /* ensuring bg image fills the screen with no scrollbars */
+    width: 100vw;
+    height: 100vh;
+    /* page load animation takes 2s */
+    animation: unblurAnimationImage 3s;
+    /* making the image larger than its border, so that the edges won't appear blurred */
+    transform: scale(1.1, 1.1);
+}
+
+/* styling the title */
+h4 {
+    font-size: 10rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    line-height: 7rem;
+}
+
+/* additional title styling via its link */
+a {
+    /* page load animation takes 4s (to stagger with the bg image animation) */
+    animation: unblurAnimationText 4s;
+    color: white;
+    /* default text is faint and blurry */
+    opacity: 30%;
+    filter: blur(2px);
+    /* hover animation takes 0.5s */
+    transition: opacity 0.5s;
+    /* layer the text on top of the bg image */
+    position: absolute;
+    /* remove the default underline applied to links */
+    text-decoration: none;
+
+}
+
+/* on hover, bring the faint blurry text into focus */
+a:hover {
+    opacity: 80%;
+    filter: blur(0px);
+}
+
+/* ensure styling doesn't revert on click */
+a:active {
+    opacity: 80%;
+    filter: blur(0px);
+}
+
+/* on page load, animate the blurriness of the text and background image */
+
+@keyframes unblurAnimationImage {
+    0% {
+        filter: blur(45px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
+
+@keyframes unblurAnimationText {
+    0% {
+        filter: blur(45px);
+    }
+
+    100% {
+        filter: blur(2px);
+    }
+}
+
+/* failed attempts to control the blur of the background image using the text hover */
+
+/* 
+a:hover img{
+    filter: blur(45px);
+}
+
+img:has(a:hover) {
+    filter: blur(0px);
+}
+
+a:hover ~ img {
+    filter: blur(0px);
+} */
